@@ -21,8 +21,8 @@ async function submitForm(event) {
         question5
     };
 
-    // هنا نضع رابط Google Apps Script الذي حصلت عليه
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwlrLOI3b10a2Rwr8fH2MfZceeDaDM3xhBPFX6KqV0vnniOLiSzghueI4U4jBZU4N3ZDA/exec';
+    // استخدام الرابط الجديد الخاص بـ Google Apps Script
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzNN4-EOUm4Sn0OdLsLZTbQWJRcLU-UANBg7LgXok9YBHUKsw-_0lY85qBepCS63CC1ww/exec';
 
     try {
         // إرسال البيانات إلى Google Sheets عبر Google Apps Script
@@ -35,6 +35,7 @@ async function submitForm(event) {
         });
 
         const result = await response.json();
+        console.log('Response from server:', result); // طباعة الاستجابة في الكونسول
 
         if (result.status === 'success') {
             // بعد نجاح الحفظ، أرسل رسالة واتساب
@@ -49,7 +50,7 @@ async function submitForm(event) {
             alert('حدث خطأ في حفظ البيانات.');
         }
     } catch (error) {
-        console.error('Error:', error);
+        console.error('Error:', error); // طباعة الخطأ في الكونسول
         alert('حدث خطأ في الاتصال بالخادم.');
     }
 }
