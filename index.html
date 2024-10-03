@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تقييم زوار جناح المدرسة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- إضافة الشعار -->
+        <header>
+            <img src="LOGO.jpeg" alt="شعار مدارس أنجال الصفوة" class="logo">
+        </header>
+
+        <h1>مرحبًا بكم في معرض الشرق الأوسط للتعليم والتدريب</h1>
+        <form id="feedbackForm" onsubmit="submitForm(event)">
+            <h2>أسئلة التقييم</h2>
+
+            <label for="question1">1. كيف تقيم تجربتك العامة؟</label><br>
+            <div class="rating">
+                <input type="radio" id="q1-1" name="question1" value="1" required><label for="q1-1">1</label>
+                <input type="radio" id="q1-2" name="question1" value="2"><label for="q1-2">2</label>
+                <input type="radio" id="q1-3" name="question1" value="3"><label for="q1-3">3</label>
+                <input type="radio" id="q1-4" name="question1" value="4"><label for="q1-4">4</label>
+                <input type="radio" id="q1-5" name="question1" value="5"><label for="q1-5">5</label>
+            </div><br>
+
+            <label for="question2">2. هل كانت المعلومات المقدمة مفيدة؟</label><br>
+            <div class="rating">
+                <input type="radio" id="q2-1" name="question2" value="1" required><label for="q2-1">1</label>
+                <input type="radio" id="q2-2" name="question2" value="2"><label for="q2-2">2</label>
+                <input type="radio" id="q2-3" name="question2" value="3"><label for="q2-3">3</label>
+                <input type="radio" id="q2-4" name="question2" value="4"><label for="q2-4">4</label>
+                <input type="radio" id="q2-5" name="question2" value="5"><label for="q2-5">5</label>
+            </div><br>
+
+            <label for="question3">3. ما مدى احتمالية توصيتك بمدرستنا للآخرين؟</label><br>
+            <div class="rating">
+                <input type="radio" id="q3-1" name="question3" value="1" required><label for="q3-1">1</label>
+                <input type="radio" id="q3-2" name="question3" value="2"><label for="q3-2">2</label>
+                <input type="radio" id="q3-3" name="question3" value="3"><label for="q3-3">3</label>
+                <input type="radio" id="q3-4" name="question3" value="4"><label for="q3-4">4</label>
+                <input type="radio" id="q3-5" name="question3" value="5"><label for="q3-5">5</label>
+            </div><br>
+
+            <label for="question4">4. ما أكثر شيء أعجبك في جناحنا؟</label><br>
+            <input type="text" id="question4" name="question4" required><br><br>
+
+            <label for="question5">5. هل لديك أي اقتراحات للتحسين؟</label><br>
+            <input type="text" id="question5" name="question5" required><br><br>
+
+            <h2>معلومات الزائر</h2>
+
+            <label for="name">الاسم:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="phone">الجوال:</label><br>
+            <input type="text" id="phone" name="phone" required><br><br>
+
+            <label for="email">الإيميل:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <button type="submit">حفظ</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
