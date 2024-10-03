@@ -21,11 +21,11 @@ async function submitForm(event) {
         question5
     };
 
-    // استبدل 'YOUR_GOOGLE_SCRIPT_URL' برابط Google Apps Script الخاص بك
-    const scriptURL = 'YOUR_GOOGLE_SCRIPT_URL';
+    // هنا نضع رابط Google Apps Script الذي حصلت عليه
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwlrLOI3b10a2Rwr8fH2MfZceeDaDM3xhBPFX6KqV0vnniOLiSzghueI4U4jBZU4N3ZDA/exec';
 
     try {
-        // حفظ البيانات في Google Sheets
+        // إرسال البيانات إلى Google Sheets عبر Google Apps Script
         const response = await fetch(scriptURL, {
             method: 'POST',
             body: JSON.stringify(data),
